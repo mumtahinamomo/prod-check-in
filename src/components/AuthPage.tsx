@@ -54,8 +54,8 @@ export function AuthPage({ onSignIn, onSignUp }: AuthPageProps) {
           >
             <Heart className="h-8 w-8 text-primary" />
           </motion.div>
-          <h1 className="font-display text-3xl font-bold">Bloom</h1>
-          <p className="text-muted-foreground mt-1 text-sm">Your productivity companion 🌸</p>
+          <h1 className="font-display text-3xl font-bold tracking-tight">Lore</h1>
+          <p className="text-muted-foreground mt-1 text-sm italic">Every list you finish is a day you lived. Lore keeps both.</p>
         </div>
 
         <Card className="border-0 shadow-lg">
@@ -128,7 +128,7 @@ export function AuthPage({ onSignIn, onSignUp }: AuthPageProps) {
         </Card>
 
         <p className="text-center text-xs text-muted-foreground mt-6">
-          Track your tasks, reading & notes ✨
+          Track your tasks, reading & notes 📖
         </p>
       </motion.div>
     </div>
