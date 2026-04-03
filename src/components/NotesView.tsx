@@ -102,7 +102,7 @@ export function NotesView({ getNoteForDate, saveNote, addImage, deleteImage }: N
             <textarea
               value={content}
               onChange={e => setContent(e.target.value)}
-              placeholder="Write your thoughts, reflections, favorite quotes... ✍️"
+              placeholder="Write your thoughts, reflections, favorite quotes..."
               className="w-full min-h-[160px] bg-transparent text-sm resize-none focus:outline-none placeholder:text-muted-foreground/60 leading-relaxed"
             />
             <div className="flex items-center justify-between mt-3 pt-3 border-t border-border">
