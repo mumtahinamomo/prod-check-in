@@ -31,16 +31,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Bloom — Pink Productivity App" },
+      { title: "Productivity Check in" },
       { name: "description", content: "Track tasks, reading habits, and personal growth with a calming pink productivity companion." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Productivity Check in" },
+      { property: "og:description", content: "Track tasks, reading habits, and personal growth with a calming pink productivity companion." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://lovable.dev/opengraph-image-p98pqg.png" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7a81d0d2-3896-4428-b68e-a9887515b8a6/id-preview-287b7800--825e3947-9e5b-41c3-9078-38b5a1480bc9.lovable.app-1775221736204.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:image", content: "https://lovable.dev/opengraph-image-p98pqg.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7a81d0d2-3896-4428-b68e-a9887515b8a6/id-preview-287b7800--825e3947-9e5b-41c3-9078-38b5a1480bc9.lovable.app-1775221736204.png" },
+      { name: "twitter:title", content: "Productivity Check in" },
+      { name: "twitter:description", content: "Track tasks, reading habits, and personal growth with a calming pink productivity companion." },
     ],
     links: [
       {
