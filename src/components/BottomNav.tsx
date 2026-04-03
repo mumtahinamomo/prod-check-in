@@ -1,7 +1,7 @@
-import { Home, CheckSquare, BarChart3, BookOpen, StickyNote } from "lucide-react";
+import { Home, CheckSquare, BarChart3, BookOpen, StickyNote, Bookmark } from "lucide-react";
 import { motion } from "framer-motion";
 
-export type ViewType = "dashboard" | "todos" | "progress" | "reading" | "notes";
+export type ViewType = "dashboard" | "todos" | "progress" | "reading" | "notes" | "saved";
 
 interface BottomNavProps {
   active: ViewType;
