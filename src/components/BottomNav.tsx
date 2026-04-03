@@ -1,7 +1,7 @@
-import { Home, CheckSquare, BarChart3, BookOpen, StickyNote } from "lucide-react";
+import { Home, CheckSquare, BarChart3, BookOpen, StickyNote, Bookmark } from "lucide-react";
 import { motion } from "framer-motion";
 
-export type ViewType = "dashboard" | "todos" | "progress" | "reading" | "notes";
+export type ViewType = "dashboard" | "todos" | "progress" | "reading" | "notes" | "saved";
 
 interface BottomNavProps {
   active: ViewType;
@@ -13,6 +13,7 @@ const tabs: { id: ViewType; label: string; icon: typeof Home }[] = [
   { id: "todos", label: "Tasks", icon: CheckSquare },
   { id: "notes", label: "Notes", icon: StickyNote },
   { id: "reading", label: "Reading", icon: BookOpen },
+  { id: "saved", label: "Saved", icon: Bookmark },
   { id: "progress", label: "Stats", icon: BarChart3 },
 ];
 

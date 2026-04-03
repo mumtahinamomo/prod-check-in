@@ -2,13 +2,14 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import { LogOut } from "lucide-react";
-import { useTasks, useReadingLog, useNotes } from "@/lib/store";
+import { useTasks, useReadingLog, useNotes, useSavedItems } from "@/lib/store";
 import { useAuth } from "@/hooks/useAuth";
 import { DashboardView } from "@/components/DashboardView";
 import { TodoView } from "@/components/TodoView";
 import { MonthlyProgressView } from "@/components/MonthlyProgressView";
 import { ReadingView } from "@/components/ReadingView";
 import { NotesView } from "@/components/NotesView";
+import { SavedItemsView } from "@/components/SavedItemsView";
 import { AuthPage } from "@/components/AuthPage";
 import { BottomNav, type ViewType } from "@/components/BottomNav";
 import { Button } from "@/components/ui/button";
@@ -55,6 +56,7 @@ function AppContent({ user, activeView, setActiveView, signOut }: {
   const taskStore = useTasks(user.id);
   const readingStore = useReadingLog(user.id);
   const notesStore = useNotes(user.id);
+  const savedStore = useSavedItems(user.id);
 
   return (
     <div className="min-h-screen bg-background pb-20">
@@ -99,6 +101,14 @@ function AppContent({ user, activeView, setActiveView, signOut }: {
                 saveNote={notesStore.saveNote}
                 addImage={notesStore.addImage}
                 deleteImage={notesStore.deleteImage}
+              />
+            )}
+            {activeView === "saved" && (
+              <SavedItemsView
+                items={savedStore.items}
+                loading={savedStore.loading}
+                addItem={savedStore.addItem}
+                deleteItem={savedStore.deleteItem}
               />
             )}
             {activeView === "progress" && (
