@@ -133,7 +133,7 @@ export function SavedItemsView({ items, loading, addItem, deleteItem }: SavedIte
       ) : filtered.length === 0 ? (
         <div className="text-center py-12 text-muted-foreground">
           <p className="text-lg">No saved items yet</p>
-          <p className="text-sm mt-1">Tap + to save a link or snippet 💕</p>
+          <p className="text-sm mt-1">Tap + to save a link or snippet</p>
         </div>
       ) : (
         <div className="space-y-3">

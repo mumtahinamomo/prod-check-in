@@ -177,7 +177,7 @@ export function NotesView({ getNoteForDate, saveNote, addImage, deleteImage }: N
       {/* Recent notes preview */}
       <motion.div variants={item}>
         <p className="text-xs text-muted-foreground text-center py-4">
-          Your notes are saved to the cloud and synced across devices 💖
+          Your notes are saved to the cloud and synced across devices
         </p>
       </motion.div>
     </motion.div>

@@ -161,7 +161,7 @@ export function ReadingView({ entries, addEntry, deleteEntry, getEntriesForDate,
             ))}
           </AnimatePresence>
           {todayEntries.length === 0 && (
-            <p className="text-center text-sm text-muted-foreground py-6">No reading logged today. Tap + to start 📖</p>
+            <p className="text-center text-sm text-muted-foreground py-6">No reading logged today. Tap + to start</p>
           )}
         </div>
       </motion.div>
