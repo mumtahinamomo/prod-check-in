@@ -137,6 +137,13 @@ export function MonthlyProgressView({ tasks, readingEntries, getTasksForMonth, g
           </CardContent>
         </Card>
       </motion.div>
+
+      {/* Week-over-Week Summary */}
+      <motion.div variants={item}>
+        <WeeklySummary tasks={tasks} readingEntries={readingEntries} />
+      </motion.div>
     </motion.div>
+  );
+}
   );
 }
