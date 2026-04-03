@@ -9,6 +9,7 @@ import { TodoView } from "@/components/TodoView";
 import { MonthlyProgressView } from "@/components/MonthlyProgressView";
 import { ReadingView } from "@/components/ReadingView";
 import { NotesView } from "@/components/NotesView";
+import { SavedItemsView } from "@/components/SavedItemsView";
 import { AuthPage } from "@/components/AuthPage";
 import { BottomNav, type ViewType } from "@/components/BottomNav";
 import { Button } from "@/components/ui/button";
