@@ -133,8 +133,6 @@ export function DashboardView({ tasks, readingEntries, readingStreak }: Dashboar
           </Card>
         </motion.div>
       )}
-
-    </motion.div>
     </motion.div>
   );
 }
