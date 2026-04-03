@@ -144,3 +144,4 @@ export function MonthlyProgressView({ tasks, readingEntries, getTasksForMonth, g
       </motion.div>
     </motion.div>
   );
+}
