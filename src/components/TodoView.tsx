@@ -1,6 +1,25 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Trash2, Pencil, Check, X, ChevronLeft, ChevronRight } from "lucide-react";
+
+function LinkifiedText({ text }: { text: string }): ReactNode {
+  const urlRegex = /(https?:\/\/\S+)/g;
+  const parts = text.split(urlRegex);
+  if (parts.length === 1) return <>{text}</>;
+  return (
+    <>
+      {parts.map((part, i) =>
+        urlRegex.test(part) ? (
+          <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="underline text-primary hover:text-accent-foreground break-all" onClick={e => e.stopPropagation()}>
+            {part}
+          </a>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </>
+  );
+}
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -192,7 +211,7 @@ export function TodoView({ addTask, toggleTask, deleteTask, editTask, getTasksFo
                         className="rounded-full h-5 w-5"
                       />
                       <span className={`flex-1 text-sm ${task.completed ? "line-through text-muted-foreground" : ""}`}>
-                        {task.text}
+                        <LinkifiedText text={task.text} />
                       </span>
                       <Button variant="ghost" size="icon" onClick={() => startEdit(task)} className="h-7 w-7 text-muted-foreground">
                         <Pencil className="h-3 w-3" />
