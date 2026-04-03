@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import { LogOut } from "lucide-react";
-import { useTasks, useReadingLog, useNotes } from "@/lib/store";
+import { useTasks, useReadingLog, useNotes, useSavedItems } from "@/lib/store";
 import { useAuth } from "@/hooks/useAuth";
 import { DashboardView } from "@/components/DashboardView";
 import { TodoView } from "@/components/TodoView";
