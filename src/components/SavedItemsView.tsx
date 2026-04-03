@@ -122,7 +122,7 @@ export function SavedItemsView({ items, loading, addItem, deleteItem }: SavedIte
             onClick={() => setFilter(f)}
             className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${filter === f ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}
           >
-            {f === "all" ? "All" : f === "link" ? "🔗 Links" : "📝 Snippets"}
+            {f === "all" ? "All" : f === "link" ? "Links" : "Snippets"}
           </button>
         ))}
       </div>
