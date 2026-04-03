@@ -211,7 +211,7 @@ export function TodoView({ addTask, toggleTask, deleteTask, editTask, getTasksFo
                         className="rounded-full h-5 w-5"
                       />
                       <span className={`flex-1 text-sm ${task.completed ? "line-through text-muted-foreground" : ""}`}>
-                        {task.text}
+                        <LinkifiedText text={task.text} />
                       </span>
                       <Button variant="ghost" size="icon" onClick={() => startEdit(task)} className="h-7 w-7 text-muted-foreground">
                         <Pencil className="h-3 w-3" />
